@@ -5,22 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YardSale</title>
     <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+      .img-left {
+        float: left;
+        margin-right: 15px;
+      }
+      .img-right {
+        float: right;
+        margin-left: 15px;
+      }
+      .img-center {
+        display: block;
+        margin: 0 auto;
+      }
+      .img-container {
+        display: flex;
+        justify-content: space-between; /* Space out the images */
+        align-items: center; /* Vertically center images */
+        padding: 20px;
+      }
+    </style>
 </head>
 <body>
     <header>
-        <h1>YardSale</h1>
+        <h1>Welcome to YardSale</h1>
     </header>
     <main>
-        <section id="scanner">
-            <h2>Scan a Barcode</h2>
-            <div id="reader" style="width: 100%;"></div>
-            <p id="result">Scan a barcode to see the result here...</p>
+        <section class="scanner">
+            <h1>Barcode Scanner</h1>
+            <div class="img-container">
+                <!-- <img class="img-left" src="/ys1.jpg" width="200" height="150" alt="Left Image">
+                <img class="img-center" src="/ys2.jpg" width="200" height="150" alt="Center Image">
+                <img class="img-right" src="/ys3.jpg" width="200" height="150" alt="Right Image"> -->
+            </div>
+            <a href="/scan.html">
+                <button style="width:200px;height:50px" id="scan-button">Scan Barcode</button>
+            </a>
+            <div id="result"></div>
         </section>
     </main>
-   
-    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-    
+    <footer>
+        <p>&copy; 2024 YardSale</p>
+    </footer>
     <script src="script.js"></script>
-    <a href="/scan.html"><button >Click Me!</button></a>
 </body>
 </html>
+<!-- -->
